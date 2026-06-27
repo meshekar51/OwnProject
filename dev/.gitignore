@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────
+# Terraform .gitignore
+# ─────────────────────────────────────────────
+
+# Local .terraform directories (provider plugins, modules cache)
+**/.terraform/*
+
+# .tfstate files — NEVER commit (contains secrets in plaintext)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# .tfvars files — often hold secrets / environment values
+# (keep example files; ignore the real ones)
+*.tfvars
+*.tfvars.json
+!example.tfvars
+!*.example.tfvars
+
+# Override files — local-only experiments not meant for the team
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Saved plan output files (may contain sensitive values)
+*.tfplan
+tfplan
+*.tfplan.*
+
+# Terraform lock info / CLI config (machine-specific creds)
+.terraformrc
+terraform.rc
+
+# Ignore the provider lock file? NO — keep it (see notes). Listed here as a reminder, commented out:
+# .terraform.lock.hcl
