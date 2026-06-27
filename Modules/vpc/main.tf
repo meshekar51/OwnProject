@@ -3,7 +3,8 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
   enable_dns_support = true
 
-  tags = {
-    Name = "main"
-  }
+  tags = merge(local.common_tags, {
+    name = "${local.name_prefix}-vpc"
+  })
+
 }

@@ -4,7 +4,7 @@ resource "aws_security_group" "port22" {
   vpc_id      = var.vpc_id
 
   tags = {
-    Name = "Port 22 access from anywhere"
+    Name = "${local.name_prefix}-secgroupport22"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_security_group" "egress_only" {
   vpc_id      = var.vpc_id
 
   tags = {
-    Name = "egress_only"
+     Name = "${local.name_prefix}-egress_only"
   }
 }
 

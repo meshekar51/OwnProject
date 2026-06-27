@@ -3,7 +3,7 @@ resource "aws_nat_gateway" "NAT-GATEWAY" {
   subnet_id     = var.Public
 
   tags = {
-    Name = "gw NAT"
+    Name = "${local.name_prefix}gw NAT"
   }
 
   # To ensure proper ordering, it is recommended to add an explicit dependency

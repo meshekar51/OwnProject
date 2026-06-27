@@ -48,8 +48,11 @@ module ec2 {
     source = "../Modules/ec2"
     public_sec = module.secgroup.public_sec
     private_sec = module.secgroup.private_sec
+    instance_type = "t3.micro"
+    Public = module.subnet.Public
+    Private = module.subnet.Private
     providers = {
     aws.prod = aws.mumbai        # ← FILLS the slot
-    }
-
+    
+}
 }
